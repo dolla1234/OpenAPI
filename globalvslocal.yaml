@@ -179,7 +179,7 @@ paths:
                       }'
         '400':
           description: bad input parameter
-    put:
+    post:
       security:
         - OAuth2: [assets]
       tags:
@@ -312,7 +312,7 @@ paths:
   /Assets/{id}:
     parameters:
       - $ref: '#/components/parameters/requiredHeader'
-    get:
+    patch:
       security:
         - OAuth2: [assets, assets.read]
       tags:
@@ -384,7 +384,7 @@ paths:
   /AssetTypes:
     parameters:
       - $ref: '#/components/parameters/requiredHeader'
-    get:
+    delete:
       security:
         - OAuth2: [assets, assets.read]
       tags:
