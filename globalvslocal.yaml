@@ -18,7 +18,7 @@ paths:
   /Assets:
     parameters:
       - $ref: '#/components/parameters/requiredHeader'
-    get:
+    post:
       security:
         - OAuth2: [assets, assets.read]
       tags:
