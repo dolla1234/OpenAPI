@@ -179,7 +179,7 @@ paths:
                       }'
         '400':
           description: bad input parameter
-    post:
+    put:
       security:
         - OAuth2: [assets]
       tags:
@@ -446,7 +446,7 @@ paths:
                         ]'
         '400':
           description: bad input parameter
-    post:
+    put:
       security:
         - OAuth2: [assets]
       tags:
