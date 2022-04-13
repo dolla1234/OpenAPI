@@ -153,7 +153,7 @@
       "Pets": {
         "type": "array",
         "items": {
-          "$ref": "#/components/schemas/Pets"
+          "$ref": "#/components/schemas/Pet"
         }
       },
       "Error": {
