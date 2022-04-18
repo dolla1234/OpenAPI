@@ -129,6 +129,23 @@
       }
     }
   },
+  "/circ":{
+      "post":{
+        "summary":"Circular Reference Loading",
+        "description":"Circular Reference",
+        "operationId":"testCirc",
+        "requestBody":{
+          "content":{
+            "application/json":{
+              "schema":{
+                "$ref":"#/components/schemas/User"
+              }
+            }
+          },
+          "required":true
+        }
+      }
+    },
   "components": {
     "schemas": {
       "Pet": {
@@ -154,6 +171,28 @@
         "type": "array",
         "items": {
           "$ref": "#/components/schemas/Pet"
+        }
+      },
+      "User":{
+        "type":"object",
+        "properties":{
+          "username":{
+            "type":"string"
+          },
+          "subUser":{
+            "$ref": "#/components/schemas/SubUser"
+          }
+        }
+      },
+      "SubUser":{
+        "type":"object",
+        "properties":{
+          "username":{
+            "type":"string"
+          },
+          "parent":{
+            "$ref": "#/components/schemas/User"
+          }
         }
       },
       "Error": {
