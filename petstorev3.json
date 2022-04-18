@@ -130,7 +130,7 @@
     }
   },
   "/circ":{
-      "post":{
+      "get":{
         "summary":"Circular Reference Loading",
         "description":"Circular Reference",
         "operationId":"testCirc",
