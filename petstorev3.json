@@ -146,7 +146,7 @@
             "type": "string"
           },
           "tag": {
-            "$ref": "#/components/schemas/Pet"
+            "type": "string"
           }
         }
       },
