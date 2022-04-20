@@ -248,9 +248,14 @@
             }
          },
          "Test":{
-            "type":"array",
-            "items":{
-               "$ref":"#/components/schemas/Test"
+            "type":"object",
+            "properties":{
+               "username":{
+                  "type":"string"
+               },
+               "parent":{
+                  "$ref":"#/components/schemas/Test"
+               }
             }
          },
          "SubUser":{
