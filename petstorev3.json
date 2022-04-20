@@ -167,7 +167,7 @@
                }
             }
          }
-      }
+      },
       "/newCirc":{
          "post":{
             "summary":"Circular Reference Loading",
