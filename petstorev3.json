@@ -168,6 +168,46 @@
             }
          }
       }
+      "/newCirc":{
+         "post":{
+            "summary":"Circular Reference Loading",
+            "description":"Circular Reference",
+            "operationId":"testCircTwo",
+            "parameters":[
+               {
+                  "name":"test",
+                  "in":"query",
+                  "required":true,
+                  "description":"name of user",
+                  "schema":{
+                     "$ref":"#/components/schemas/Test"
+                  }
+               }
+            ],
+            "responses":{
+               "200":{
+                  "description":"Expected response to a valid request",
+                  "content":{
+                     "application/json":{
+                        "schema":{
+                           "$ref":"#/components/schemas/Test"
+                        }
+                     }
+                  }
+               },
+               "default":{
+                  "description":"unexpected error",
+                  "content":{
+                     "application/json":{
+                        "schema":{
+                           "$ref":"#/components/schemas/Error"
+                        }
+                     }
+                  }
+               }
+            }
+         }
+      }
    },
    "components":{
       "schemas":{
@@ -205,6 +245,12 @@
                "subUser":{
                   "$ref":"#/components/schemas/SubUser"
                }
+            }
+         },
+         "Test":{
+            "type":"array",
+            "items":{
+               "$ref":"#/components/schemas/Test"
             }
          },
          "SubUser":{
