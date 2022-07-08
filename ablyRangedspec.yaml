@@ -481,12 +481,12 @@ paths:
               schema:
                 type: array
                 items:
-                  $ref: '#/components/schemas/Message'
+                  $ref: '#/components/schemas/Push'
             application/x-msgpack:
               schema:
                 type: array
                 items:
-                  $ref: '#/components/schemas/Message'
+                  $ref: '#/components/schemas/Push'
             text/html:
               schema:
                 type: string
