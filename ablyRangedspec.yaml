@@ -511,28 +511,6 @@ paths:
             text/html:
               schema:
                 type: string
-        '200':
-          description: OK
-          headers:
-            link:
-              $ref: '#/components/headers/Link'
-            x-ably-serverid:
-              $ref: '#/components/headers/ServerId'
-          content:
-            application/json:
-              schema:
-                type: array
-                items:
-                  $ref: '#/components/schemas/Notification'
-            application/x-msgpack:
-              schema:
-                type: array
-                items:
-                  $ref: '#/components/schemas/Notification'
-            text/html:
-              schema:
-                type: string        
-
 
     post:
       summary: Publish a message to a channel
