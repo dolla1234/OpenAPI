@@ -468,7 +468,6 @@ paths:
         - $ref: '#/components/parameters/filterLimit'
         - $ref: '#/components/parameters/filterEnd'
         - $ref: '#/components/parameters/filterDirection'
-      responses:
         default:
           description: Error
           headers:
